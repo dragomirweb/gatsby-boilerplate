@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { x } from '@xstyled/styled-components'
 
-import StandardLayout from '@layouts/StandardLayout'
+import { NormalLayout } from '@layouts'
 import { Image } from '@atoms'
 
 function Button(props) {
@@ -10,7 +10,7 @@ function Button(props) {
 
 const IndexPage = () => {
   return (
-    <StandardLayout>
+    <NormalLayout>
       <x.div
         display="flex"
         flexDirection="column"
@@ -20,11 +20,10 @@ const IndexPage = () => {
         h="100vh"
         mt={96}
       >
-        <Image></Image>
         <h1>Home Page</h1>
         <Button>Hello</Button>
       </x.div>
-    </StandardLayout>
+    </NormalLayout>
   )
 }
 

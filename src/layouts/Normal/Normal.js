@@ -5,7 +5,7 @@ import {
   Preflight,
 } from '@xstyled/styled-components'
 
-import '../assets/css/reset.css'
+import '@assets/css/reset.css'
 
 const theme = {
   ...defaultTheme,

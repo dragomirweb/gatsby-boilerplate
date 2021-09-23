@@ -34,7 +34,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: path.join(__dirname, `src`, `assets`, `images`),
       },
       __key: 'images',
     },
@@ -51,6 +51,7 @@ module.exports = {
           '@features': path.resolve(__dirname, 'src/components/features'),
           '@layouts': path.resolve(__dirname, 'src/layouts'),
           '@contexts': path.resolve(__dirname, 'src/context'),
+          '@assets': path.resolve(__dirname, 'src/assets'),
         },
         extensions: ['js'],
       },
