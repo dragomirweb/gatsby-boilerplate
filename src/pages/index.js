@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { x } from '@xstyled/styled-components'
 
-import StandardLayout from '../layouts/StandardLayout'
+import StandardLayout from '@layouts/StandardLayout'
+import { Image } from '@atoms'
 
 function Button(props) {
   return <x.button w={20} h={20} bg="blue-500" {...props} />
@@ -19,6 +20,7 @@ const IndexPage = () => {
         h="100vh"
         mt={96}
       >
+        <Image></Image>
         <h1>Home Page</h1>
         <Button>Hello</Button>
       </x.div>

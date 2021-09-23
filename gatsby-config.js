@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.yourdomain.tld',
@@ -35,6 +37,23 @@ module.exports = {
         path: './src/images/',
       },
       __key: 'images',
+    },
+
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@': path.resolve(__dirname, 'src/'),
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@atoms': path.resolve(__dirname, 'src/components/atoms'),
+          '@molecules': path.resolve(__dirname, 'src/components/molecules'),
+          '@organisms': path.resolve(__dirname, 'src/components/organisms'),
+          '@features': path.resolve(__dirname, 'src/components/features'),
+          '@layouts': path.resolve(__dirname, 'src/layouts'),
+          '@contexts': path.resolve(__dirname, 'src/context'),
+        },
+        extensions: ['js'],
+      },
     },
   ],
 }
